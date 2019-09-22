@@ -4,11 +4,11 @@ pipeline {
     stages {
         stage(Build) {
             when {
-                changelog '.*some_text.*'
+                changeRequest()
             }
             
             steps {
-                echo "Hello World changelog"
+                echo "Hello World changing request"
             }
             
         }
